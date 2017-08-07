@@ -35,7 +35,7 @@ function start($telegram,$update)
 		$img = curl_file_create('osm_logo.png','image/png');
 		$contentp = array('chat_id' => $chat_id, 'photo' => $img);
 		$telegram->sendPhoto($contentp);
-		$reply = "Benvenuto. Questo è un servizio automatico (bot da Robot) di ".NAME.". Puoi ricercare gli argomenti del Wiki di OpenStreeMap per parola chiave descrittiva anteponendo il carattere ? e quindi fare una ricerca per numero corrispondente. In qualsiasi momento scrivendo /start ti ripeterò questo messaggio di benvenuto.\nQuesto bot è stato realizzato da @piersoft insieme a ".NAME.". Il progetto e il codice sorgente sono liberamente riutilizzabili con licenza MIT.";
+		$reply = "Benvenuto. Questo è un servizio automatico (bot da Robot) di ".NAME.". Puoi ricercare gli argomenti del Wiki di OpenStreeMap per parola chiave descrittiva anteponendo il carattere ? e quindi fare una ricerca per numero corrispondente. In qualsiasi momento scrivendo /start ti ripeterò questo messaggio di benvenuto.\nQuesto bot è stato realizzato da @piersoft insieme a ".NAME.". Il progetto e il codice sorgente sono liberamente riutilizzabili con licenza MIT su https://github.com/piersoft/osmwikibot.\nVuoi contribuire a migliorare la ricerca per parola chiave? contatta @piersoft";
 		$content = array('chat_id' => $chat_id, 'text' => $reply,'disable_web_page_preview'=>true);
 		$telegram->sendMessage($content);
 		$log=$today. ";new chat started;" .$chat_id. "\n";
